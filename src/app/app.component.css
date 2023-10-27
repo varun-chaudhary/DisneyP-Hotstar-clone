@@ -9,9 +9,24 @@
     color: #ffffff;
     font-weight: 500;
     font-size: 20px;
+   
+background:rgba(12,17,27,1);
+
 }
 
 .gradient-custom {
     background: rgb(12,17,27);
 background: linear-gradient(180deg, rgba(12,17,27,1) 11%, rgba(12,17,27,0) 100%);
   }
+
+         
+ .custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+ 
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+"https://www.clipartmax.com/png/middle/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png");
+}
+
