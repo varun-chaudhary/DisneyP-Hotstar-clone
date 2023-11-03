@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "showtime": {
+    "DisneyP-Hotstar-clone": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,10 +13,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/showtime/browser",
+            "outputPath": "dist/disney-p-hotstar-clone",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -41,12 +43,6 @@
                   "maximumError": "4kb"
                 }
               ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
               "outputHashing": "all"
             },
             "development": {
@@ -64,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "showtime:build:production"
+              "browserTarget": "DisneyP-Hotstar-clone:build:production"
             },
             "development": {
-              "browserTarget": "showtime:build:development"
+              "browserTarget": "DisneyP-Hotstar-clone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,16 +71,17 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "showtime:build"
+            "browserTarget": "DisneyP-Hotstar-clone:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -99,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "28a2aedb-79dc-4e54-a07e-d479d2cecf63"
+    "analytics": "74ada047-2a1f-4d58-bb5c-a4fdacdaecec"
   }
 }
